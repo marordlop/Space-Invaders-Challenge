@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/f2e34656-bf61-4bb1-8e73-5819458abbd0
+
 # Esquiva los obstáculos (Pygame)
 
 Juego de dos jugadores en el que hay que esquivar obstáculos que caen.
