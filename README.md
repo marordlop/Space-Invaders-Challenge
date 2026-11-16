@@ -2,8 +2,8 @@
 
 Juego de dos jugadores en el que hay que esquivar obstáculos que caen.
 
-- **Jugador 1:** flechas del teclado (azul)
-- **Jugador 2:** teclas W A S D (verde)
+- **Jugador 1 (izquierda, azul):** teclas W A S D
+- **Jugador 2 (derecha, verde):** flechas del teclado
 - **ESC:** pausa · **+ / -:** velocidad del jugador 1 · **R:** reiniciar tras el Game Over
 
 ## Archivos
