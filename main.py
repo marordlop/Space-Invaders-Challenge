@@ -135,7 +135,7 @@ class Juego:
     def __init__(self):
         pygame.init()
         self.pantalla = pygame.display.set_mode((ANCHO, ALTO))
-        pygame.display.set_caption("Esquiva los obstáculos")
+        pygame.display.set_caption("Space Invaders Challenge")
         self.reloj = pygame.time.Clock()
         self.f_peq = pygame.font.SysFont(None, 26)
         self.f_med = pygame.font.SysFont(None, 40)
@@ -294,17 +294,17 @@ class Juego:
         self.pantalla.blit(surf, surf.get_rect(**pos))
 
     def dibujar_top5(self, y_inicial):
-        self.texto("TOP 5", self.f_med, BLANCO, midtop=(ANCHO // 2, y_inicial))
+        self.texto("TOP 5", self.f_med, ROJO, midtop=(ANCHO // 2, y_inicial))
         if not self.top5:
             self.texto("Todavía no hay puntuaciones", self.f_peq, BLANCO, midtop=(ANCHO // 2, y_inicial + 40))
         for i, (nombre, punt) in enumerate(self.top5):
             self.texto(f"{i + 1}. {nombre} - {punt}", self.f_peq, BLANCO, midtop=(ANCHO // 2, y_inicial + 40 + i * 26))
-
+    
     def dibujar(self):
         self.pantalla.fill(NEGRO)
 
         if self.estado == "menu":
-            self.texto("ESQUIVA LOS OBSTÁCULOS", self.f_med, BLANCO, center=(ANCHO // 2, 90))
+            self.texto("SPACE INVADERS CHALLENGE", self.f_med, BLANCO, center=(ANCHO // 2, 90))
             self.texto("J1 (izquierda): WASD  |  J2 (derecha): flechas  |  +/-: velocidad J1  |  ESC: pausa", self.f_peq, BLANCO, center=(ANCHO // 2, 140))
             self.dibujar_top5(200)
             self.texto("Pulsa cualquier tecla para empezar", self.f_med, VERDE, center=(ANCHO // 2, 500))
